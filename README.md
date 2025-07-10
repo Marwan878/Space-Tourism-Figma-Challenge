@@ -123,6 +123,8 @@ If you'd like to contribute to this project:
 
 ---
 
-**Live Demo**: [Add your deployed site URL here]
+**Live Demo**: https://space-tourism-figma-challenge.vercel.app/
 
 **Frontend Mentor**: https://www.frontendmentor.io/profile/Marwan878
+
+**Figma File**: https://www.figma.com/design/ggQoZ6XGDk9BhSRxuMYrr4/space-tourism-website?m=auto&t=RwwXmpz026u4AZ5Y-1
