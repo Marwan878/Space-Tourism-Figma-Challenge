@@ -1,0 +1,23 @@
+@use "./variables" as *;
+
+@each $color, $shades in $colors {
+  @if type-of($shades) == "map" {
+    @each $shade, $hsl in $shades {
+      .bg-#{$color}-#{$shade} {
+        background-color: hsl($hsl);
+      }
+
+      .text-#{$color}-#{$shade} {
+        color: hsl($hsl);
+      }
+    }
+  } @else {
+    .bg-#{$color} {
+      background-color: hsl($shades);
+    }
+
+    .text-#{$color} {
+      color: hsl($shades);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use "../../styles/functions" as *;
+
+.pageIndex {
+  font-weight: bold;
+  font-size: pxToRem(16);
+  line-height: normal;
+  letter-spacing: 0.15em;
+  color: hsl(var(--color-white) / 0.25);
+  display: inline-block;
+  margin-inline-end: calc(24 / 16 * 1rem);
+  font-family: "Barlow Condensed", sans-serif;
+
+  @media (min-width: 768px) {
+    font-size: pxToRem(20);
+  }
+
+  @media (min-width: 1440px) {
+    font-size: pxToRem(28);
+    letter-spacing: 4.72px;
+  }
+}

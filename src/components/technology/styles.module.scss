@@ -1,0 +1,32 @@
+@use "../../styles//functions.scss" as *;
+
+.image {
+  bottom: 0;
+  height: 373px;
+  object-fit: cover;
+
+  @media (min-width: 768px) {
+    bottom: -185px;
+    height: 787px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 1021px;
+    object-fit: contain;
+  }
+}
+
+.imageContainer {
+  @media (min-width: 768px) {
+    margin-top: pxToRem(64);
+  }
+  @media (min-width: 1440px) {
+    margin-block: pxToRem(67);
+  }
+}
+
+.pagination {
+  @media (min-width: 1440px) {
+    margin-inline-start: pxToRem(165);
+  }
+}

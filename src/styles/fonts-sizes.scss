@@ -1,0 +1,355 @@
+@use "./font-families";
+@use "./functions" as *;
+@use "./variables" as *;
+
+/*
+  I'd to write the code this way as the Figma file is not properly organized.
+  For example, on small screens the desktop presets are used. So it's confusing.
+  That's why you shouldn't mind for the mobile- tablet- desktop- prefixes.   
+*/
+
+@mixin mobile-text-preset-1 {
+  font-size: pxToRem(80);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-family: "Bellefair", serif;
+}
+
+.mobile-text-preset-1 {
+  @include mobile-text-preset-1;
+}
+
+@mixin mobile-text-preset-2 {
+  font-size: pxToRem(56);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.mobile-text-preset-2 {
+  @include mobile-text-preset-2;
+}
+
+@mixin mobile-text-preset-3 {
+  font-size: pxToRem(24);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.mobile-text-preset-3 {
+  @include mobile-text-preset-3;
+}
+
+@mixin mobile-text-preset-4 {
+  font-size: pxToRem(18);
+  line-height: normal;
+  letter-spacing: 0px;
+  font-family: "Bellefair", serif;
+}
+
+.mobile-text-preset-4 {
+  @include mobile-text-preset-4;
+}
+
+@mixin mobile-text-preset-6 {
+  font-size: pxToRem(16);
+  letter-spacing: 0.15em;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.mobile-text-preset-6 {
+  @include mobile-text-preset-6;
+}
+
+@mixin mobile-text-preset-8 {
+  font-size: pxToRem(14);
+  letter-spacing: 0.15em;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.mobile-text-preset-8 {
+  @include mobile-text-preset-8;
+}
+
+@mixin mobile-text-preset-9 {
+  font-size: pxToRem(15);
+  letter-spacing: 0px;
+  line-height: 180%;
+  font-family: "Barlow", sans-serif;
+}
+
+.mobile-text-preset-9 {
+  @include mobile-text-preset-9;
+}
+
+@mixin tablet-text-preset-2 {
+  font-size: pxToRem(80);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.tablet-text-preset-2 {
+  @include tablet-text-preset-2;
+}
+
+@mixin tablet-text-preset-3 {
+  font-size: pxToRem(40);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.tablet-text-preset-3 {
+  @include tablet-text-preset-3;
+}
+
+@mixin tablet-text-preset-4 {
+  font-size: pxToRem(24);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.tablet-text-preset-4 {
+  @include tablet-text-preset-4;
+}
+
+@mixin tablet-text-preset-5 {
+  font-size: 20px;
+  letter-spacing: 0.15em;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.tablet-text-preset-5 {
+  @include tablet-text-preset-5;
+}
+
+@mixin tablet-text-preset-9 {
+  font-size: pxToRem(16);
+  letter-spacing: 0px;
+  line-height: 180%;
+  font-weight: normal;
+  font-family: "Barlow", sans-serif;
+}
+
+.tablet-text-preset-9 {
+  @include tablet-text-preset-9;
+}
+
+@mixin desktop-text-preset-1 {
+  font-size: pxToRem(144);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.desktop-text-preset-1 {
+  @include desktop-text-preset-1;
+}
+
+@mixin desktop-text-preset-2 {
+  font-size: pxToRem(96);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.desktop-text-preset-2 {
+  @include desktop-text-preset-2;
+}
+
+@mixin desktop-text-preset-3 {
+  font-size: 56px;
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.desktop-text-preset-3 {
+  @include desktop-text-preset-3;
+}
+
+@mixin desktop-text-preset-4 {
+  font-size: pxToRem(32);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.desktop-text-preset-4 {
+  @include desktop-text-preset-4;
+}
+
+@mixin desktop-text-preset-5 {
+  font-size: pxToRem(28);
+  letter-spacing: 4px;
+  line-height: normal;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.desktop-text-preset-5 {
+  @include desktop-text-preset-5;
+}
+
+@mixin desktop-text-preset-6 {
+  font-size: pxToRem(28);
+  letter-spacing: 0px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Bellefair", serif;
+}
+
+.desktop-text-preset-6 {
+  @include desktop-text-preset-6;
+}
+
+@mixin desktop-text-preset-7 {
+  font-size: pxToRem(14);
+  letter-spacing: 2px;
+  line-height: normal;
+  font-weight: normal;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.desktop-text-preset-7 {
+  @include desktop-text-preset-7;
+}
+
+@mixin desktop-text-preset-8 {
+  font-size: pxToRem(16);
+  line-height: normal;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.desktop-text-preset-8 {
+  @include desktop-text-preset-8;
+}
+
+@mixin desktop-text-preset-9 {
+  font-size: pxToRem(18);
+  letter-spacing: 0px;
+  line-height: 180%;
+  font-weight: normal;
+  font-family: "Barlow", sans-serif;
+}
+
+.desktop-text-preset-9 {
+  @include desktop-text-preset-9;
+}
+
+$presets-names: (
+  mobile-text-preset-1,
+  mobile-text-preset-2,
+  mobile-text-preset-3,
+  mobile-text-preset-4,
+  mobile-text-preset-6,
+  mobile-text-preset-8,
+  mobile-text-preset-9,
+  tablet-text-preset-2,
+  tablet-text-preset-3,
+  tablet-text-preset-4,
+  tablet-text-preset-5,
+  tablet-text-preset-9,
+  desktop-text-preset-1,
+  desktop-text-preset-2,
+  desktop-text-preset-3,
+  desktop-text-preset-4,
+  desktop-text-preset-5,
+  desktop-text-preset-6,
+  desktop-text-preset-7,
+  desktop-text-preset-8,
+  desktop-text-preset-9
+);
+
+@each $preset-name in $presets-names {
+  @each $breakpoint, $size in $breakpoints {
+    @media (min-width: $size) {
+      .#{#{$breakpoint}\:#{$preset-name}} {
+        @if $preset-name == mobile-text-preset-1 {
+          @include mobile-text-preset-1;
+        }
+        @if $preset-name == mobile-text-preset-2 {
+          @include mobile-text-preset-2;
+        }
+        @if $preset-name == mobile-text-preset-3 {
+          @include mobile-text-preset-3;
+        }
+        @if $preset-name == mobile-text-preset-4 {
+          @include mobile-text-preset-4;
+        }
+        @if $preset-name == mobile-text-preset-6 {
+          @include mobile-text-preset-6;
+        }
+        @if $preset-name == mobile-text-preset-8 {
+          @include mobile-text-preset-8;
+        }
+        @if $preset-name == mobile-text-preset-9 {
+          @include mobile-text-preset-9;
+        }
+
+        @if $preset-name == tablet-text-preset-2 {
+          @include tablet-text-preset-2;
+        }
+        @if $preset-name == tablet-text-preset-3 {
+          @include tablet-text-preset-3;
+        }
+        @if $preset-name == tablet-text-preset-4 {
+          @include tablet-text-preset-4;
+        }
+        @if $preset-name == tablet-text-preset-5 {
+          @include tablet-text-preset-5;
+        }
+        @if $preset-name == tablet-text-preset-9 {
+          @include tablet-text-preset-9;
+        }
+
+        @if $preset-name == desktop-text-preset-1 {
+          @include desktop-text-preset-1;
+        }
+        @if $preset-name == desktop-text-preset-2 {
+          @include desktop-text-preset-2;
+        }
+        @if $preset-name == desktop-text-preset-3 {
+          @include desktop-text-preset-3;
+        }
+        @if $preset-name == desktop-text-preset-4 {
+          @include desktop-text-preset-4;
+        }
+        @if $preset-name == desktop-text-preset-5 {
+          @include desktop-text-preset-5;
+        }
+        @if $preset-name == desktop-text-preset-6 {
+          @include desktop-text-preset-6;
+        }
+        @if $preset-name == desktop-text-preset-7 {
+          @include desktop-text-preset-7;
+        }
+        @if $preset-name == desktop-text-preset-8 {
+          @include desktop-text-preset-8;
+        }
+        @if $preset-name == desktop-text-preset-9 {
+          @include desktop-text-preset-9;
+        }
+      }
+    }
+  }
+}

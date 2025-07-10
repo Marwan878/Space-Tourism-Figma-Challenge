@@ -1,0 +1,24 @@
+@use "../../styles/functions" as *;
+
+.planetImageContainer {
+  margin-block-start: pxToRem(26.5);
+  margin-block-end: pxToRem(58.5);
+  @media (min-width: 768px) {
+    margin-block-start: pxToRem(42);
+    margin-block-end: pxToRem(85.5);
+  }
+
+  @media (min-width: 1440px) {
+    padding-inline: pxToRem(29.5);
+  }
+}
+
+.descriptionStats {
+  @media (min-width: 768px) {
+    margin-block-end: pxToRem(11.5);
+  }
+
+  @media (min-width: 1440px) {
+    margin-block-end: 0;
+  }
+}

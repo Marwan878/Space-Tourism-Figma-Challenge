@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding-inline: unset;
+  padding-block: unset;
+}
+
+dd {
+  margin-inline-start: unset;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin-block: unset;
+  padding-inline-start: unset;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+hr {
+  margin-block-start: unset;
+  margin-block-end: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
+  border-style: unset;
+  border-width: unset;
+}
+
+dl {
+  margin-block: unset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

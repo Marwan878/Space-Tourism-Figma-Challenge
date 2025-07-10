@@ -1,0 +1,14 @@
+.link {
+  border-block-end: 3px solid transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-block-end-color: hsl(var(--color-white) / 0.5);
+  }
+
+  &.selected {
+    border-block-end-color: hsl(var(--color-white));
+    color: hsl(var(--color-white));
+  }
+}

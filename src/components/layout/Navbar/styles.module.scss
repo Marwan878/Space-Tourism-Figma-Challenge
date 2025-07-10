@@ -1,0 +1,24 @@
+@use "../../../styles/functions" as *;
+
+.link {
+  border-bottom: 3px solid transparent;
+  margin-inline-end: -2px;
+
+  &.selected {
+    border-bottom-color: white;
+  }
+
+  &:hover:not(.selected),
+  &:focus:not(.selected),
+  &:active:not(.selected) {
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.linksList {
+  padding-inline-start: pxToRem(87);
+
+  @media (min-width: 1440px) {
+    padding-inline-start: pxToRem(159);
+  }
+}

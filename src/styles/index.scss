@@ -1,0 +1,15 @@
+@use "./fonts-sizes";
+@use "./utilities";
+@use "./resets";
+@use "./font-families";
+@use "./font-weights";
+@use "./spacing";
+@use "./colors";
+@use "./variables" as *;
+@use "./functions" as *;
+
+:root {
+  --color-white: 0 0% 100%;
+  --color-blue-300: 231 77% 90%;
+  --color-blue-900: 230 35% 7%;
+}

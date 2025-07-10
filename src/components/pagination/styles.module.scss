@@ -1,0 +1,37 @@
+.smallPagination {
+  background-color: hsl(var(--color-white));
+  opacity: 0.1744;
+
+  &:active,
+  &:hover,
+  &:focus {
+    opacity: 0.5001;
+  }
+
+  &.selected {
+    opacity: 1;
+  }
+
+  @media (min-width: 1440px) {
+    margin-top: auto;
+  }
+}
+
+.largePagination {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.25);
+  color: hsl(var(--color-white));
+
+  &:active,
+  &:hover,
+  &:focus,
+  &.selected {
+    border-color: rgba(255, 255, 255, 1);
+  }
+
+  &.selected {
+    background-color: hsl(var(--color-white));
+    color: hsl(var(--color-blue-900));
+  }
+}

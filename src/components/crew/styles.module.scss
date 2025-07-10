@@ -1,0 +1,17 @@
+@use "../../styles/functions" as *;
+
+.image {
+  @media (min-width: 768px) {
+    transform: translateY(60px);
+  }
+
+  @media (min-width: 1440px) {
+    transform: unset;
+  }
+}
+
+.imageContainer {
+  @media (min-width: 1440px) {
+    padding-block: pxToRem(29);
+  }
+}

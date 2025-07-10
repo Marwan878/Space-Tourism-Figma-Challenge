@@ -1,0 +1,23 @@
+@use "../styles/functions" as *;
+
+.textAndTabsContainer {
+  @media (min-width: 1440px) {
+    padding-inline: pxToRem(47);
+    padding-block: pxToRem(133);
+  }
+}
+
+.crewDescription {
+  margin-block-end: pxToRem(80);
+  @media (min-width: 768px) {
+    margin-block-end: pxToRem(54.6);
+  }
+}
+
+.technologyContainer,
+.technologyPageTitle {
+  margin-inline-start: pxToRem(40);
+  @media (min-width: 1440px) {
+    margin-inline-start: pxToRem(165);
+  }
+}

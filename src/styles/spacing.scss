@@ -1,0 +1,98 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+@for $i from 0 through 128 {
+  .m-#{$i} {
+    margin: pxToRem($base-spacing * $i);
+  }
+
+  .p-#{$i} {
+    padding: pxToRem($base-spacing * $i);
+  }
+
+  .gap-#{$i} {
+    gap: pxToRem($base-spacing * $i);
+  }
+
+  @each $short, $direction in $directions {
+    .m#{$short}-#{$i} {
+      margin-#{$direction}: pxToRem($base-spacing * $i);
+    }
+
+    .p#{$short}-#{$i} {
+      padding-#{$direction}: pxToRem($base-spacing * $i);
+    }
+  }
+}
+
+@for $i from 0 through 1000 {
+  .w-#{$i} {
+    width: pxToRem($i);
+  }
+
+  .h-#{$i} {
+    height: pxToRem($i);
+  }
+}
+
+.flex-basis-1\/2 {
+  flex-basis: 50%;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.w-unset {
+  width: unset;
+}
+
+@each $breakpoint, $value in $breakpoints {
+  @media (min-width: $value) {
+    .#{$breakpoint}\:flex-basis-1\/2 {
+      flex-basis: 50%;
+    }
+
+    .#{$breakpoint}\:flex-grow-1 {
+      flex-grow: 1;
+    }
+
+    .#{$breakpoint}\:w-unset {
+      width: unset;
+    }
+
+    @for $i from 0 through 128 {
+      .#{$breakpoint}\:m-#{$i} {
+        margin: pxToRem($base-spacing * $i);
+      }
+
+      .#{$breakpoint}\:p-#{$i} {
+        padding: pxToRem($base-spacing * $i);
+      }
+
+      .#{$breakpoint}\:gap-#{$i} {
+        gap: pxToRem($base-spacing * $i);
+      }
+
+      @each $short, $direction in $directions {
+        .#{$breakpoint}\:m#{$short}-#{$i} {
+          margin-#{$direction}: pxToRem($base-spacing * $i);
+        }
+
+        .#{$breakpoint}\:p#{$short}-#{$i} {
+          padding-#{$direction}: pxToRem($base-spacing * $i);
+        }
+      }
+    }
+
+    @for $i from 0 through 1000 {
+      .#{$breakpoint}\:w-#{$i} {
+        width: pxToRem($i);
+      }
+
+      .#{$breakpoint}\:h-#{$i} {
+        height: pxToRem($i);
+      }
+    }
+  }
+}

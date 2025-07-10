@@ -1,0 +1,327 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+// Mixins for utility classes
+@mixin rounded-full {
+  border-radius: 50%;
+}
+
+@mixin uppercase {
+  text-transform: uppercase;
+}
+
+@mixin relative {
+  position: relative;
+}
+
+@mixin absolute {
+  position: absolute;
+}
+
+@mixin fixed {
+  position: fixed;
+}
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin grid {
+  display: grid;
+}
+
+@mixin hidden {
+  display: none;
+}
+
+@mixin block {
+  display: block;
+}
+
+@mixin items-center {
+  align-items: center;
+}
+
+@mixin items-end {
+  align-items: flex-end;
+}
+
+@mixin justify-between {
+  justify-content: space-between;
+}
+
+@mixin justify-center {
+  justify-content: center;
+}
+
+@mixin justify-start {
+  justify-content: flex-start;
+}
+
+@mixin justify-end {
+  justify-content: flex-end;
+}
+
+@mixin flex-row {
+  flex-direction: row;
+}
+
+@mixin flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@mixin flex-col {
+  flex-direction: column;
+}
+
+@mixin self-start {
+  align-self: flex-start;
+}
+
+@mixin items-stretch {
+  align-items: stretch;
+}
+
+@mixin container {
+  margin-inline: auto;
+  padding-inline: pxToRem(24);
+  padding-block: pxToRem(24);
+
+  @media (min-width: 768px) {
+    max-width: 69.375rem;
+    padding-inline: pxToRem(40);
+    padding-block: pxToRem(40);
+  }
+
+  @media (min-width: 1440px) {
+    padding-inline: pxToRem(165);
+    padding-block: pxToRem(48);
+  }
+}
+
+@mixin text-center {
+  text-align: center;
+}
+
+@mixin text-start {
+  text-align: start;
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Base utility classes
+.rounded-full {
+  @include rounded-full;
+}
+
+.uppercase {
+  @include uppercase;
+}
+
+.relative {
+  @include relative;
+}
+
+.absolute {
+  @include absolute;
+}
+
+.fixed {
+  @include fixed;
+}
+
+.flex {
+  @include flex;
+}
+
+.grid {
+  @include grid;
+}
+
+.hidden {
+  @include hidden;
+}
+
+.block {
+  @include block;
+}
+
+.items-center {
+  @include items-center;
+}
+
+.items-end {
+  @include items-end;
+}
+
+.justify-between {
+  @include justify-between;
+}
+
+.justify-center {
+  @include justify-center;
+}
+
+.justify-end {
+  @include justify-end;
+}
+
+.justify-start {
+  @include justify-start;
+}
+
+.self-start {
+  @include self-start;
+}
+
+.items-stretch {
+  @include items-stretch;
+}
+
+.flex-col {
+  @include flex-col;
+}
+
+.flex-row {
+  @include flex-row;
+}
+
+.flex-row-reverse {
+  @include flex-row-reverse;
+}
+
+.container {
+  @include container;
+}
+
+.text-center {
+  @include text-center;
+}
+
+.text-start {
+  @include text-start;
+}
+
+.sr-only {
+  @include sr-only;
+}
+
+// List of utility names for responsive generation
+$utility-names: (
+  rounded-full,
+  uppercase,
+  relative,
+  absolute,
+  fixed,
+  flex,
+  grid,
+  hidden,
+  block,
+  items-center,
+  items-end,
+  justify-between,
+  justify-center,
+  justify-end,
+  justify-start,
+  flex-row,
+  flex-row-reverse,
+  flex-col,
+  self-start,
+  items-stretch,
+  container,
+  text-center,
+  text-start,
+  sr-only
+);
+
+// Generate responsive utility classes
+@each $utility-name in $utility-names {
+  @each $breakpoint, $size in $breakpoints {
+    @media (min-width: $size) {
+      .#{#{$breakpoint}\:#{$utility-name}} {
+        @if $utility-name == rounded-full {
+          @include rounded-full;
+        }
+        @if $utility-name == uppercase {
+          @include uppercase;
+        }
+        @if $utility-name == relative {
+          @include relative;
+        }
+        @if $utility-name == absolute {
+          @include absolute;
+        }
+        @if $utility-name == fixed {
+          @include fixed;
+        }
+        @if $utility-name == flex {
+          @include flex;
+        }
+        @if $utility-name == grid {
+          @include grid;
+        }
+        @if $utility-name == hidden {
+          @include hidden;
+        }
+        @if $utility-name == block {
+          @include block;
+        }
+        @if $utility-name == items-center {
+          @include items-center;
+        }
+        @if $utility-name == items-end {
+          @include items-end;
+        }
+        @if $utility-name == justify-between {
+          @include justify-between;
+        }
+        @if $utility-name == justify-center {
+          @include justify-center;
+        }
+        @if $utility-name == justify-end {
+          @include justify-end;
+        }
+        @if $utility-name == justify-start {
+          @include justify-start;
+        }
+        @if $utility-name == flex-row {
+          @include flex-row;
+        }
+        @if $utility-name == flex-row-reverse {
+          @include flex-row-reverse;
+        }
+        @if $utility-name == flex-col {
+          @include flex-col;
+        }
+        @if $utility-name == items-stretch {
+          @include items-stretch;
+        }
+        @if $utility-name == self-start {
+          @include self-start;
+        }
+        @if $utility-name == container {
+          @include container;
+        }
+        @if $utility-name == text-center {
+          @include text-center;
+        }
+        @if $utility-name == text-start {
+          @include text-start;
+        }
+        @if $utility-name == sr-only {
+          @include sr-only;
+        }
+      }
+    }
+  }
+}

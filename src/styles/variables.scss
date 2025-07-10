@@ -1,0 +1,24 @@
+$colors: (
+  blue: (
+    300: var(--color-blue-300),
+    900: var(--color-blue-900),
+  ),
+  white: var(--color-white),
+);
+
+$directions: (
+  s: inline-start,
+  e: inline-end,
+  t: top,
+  b: bottom,
+  y: block,
+  x: inline,
+);
+
+$base-spacing: 2;
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1440px,
+);

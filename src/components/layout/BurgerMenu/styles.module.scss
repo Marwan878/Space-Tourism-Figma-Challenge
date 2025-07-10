@@ -1,0 +1,13 @@
+.link {
+  border-inline-end: 3px solid transparent;
+
+  &:hover:not(.selected),
+  &:focus:not(.selected),
+  &:active:not(.selected) {
+    border-inline-end-color: hsl(var(--color-white) / 0.5);
+  }
+
+  &.selected {
+    border-inline-end-color: hsl(var(--color-white));
+  }
+}
